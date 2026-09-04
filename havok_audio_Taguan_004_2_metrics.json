@@ -1,0 +1,111 @@
+{
+  "audio_path": "Taguan_004.2.wav",
+  "native_sample_rate_hz": 192000.0,
+  "analysis_sample_rate_hz": 192000.0,
+  "segment_start_ms": 80.0,
+  "segment_end_ms": 120.0,
+  "segment_source": "explicit_milliseconds",
+  "segment_samples": 7680,
+  "train_fraction": 0.8,
+  "train_samples": 6144,
+  "test_samples": 1536,
+  "normalization": {
+    "training_mean_pcm_counts": -0.11979166666666667,
+    "training_std_pcm_counts": 35.85930313476217,
+    "note": "WAV amplitudes are uncalibrated PCM counts, not pascals."
+  },
+  "estimated_energy_removed_by_resampling": 0.0,
+  "observed_forcing": {
+    "interpretation": "reconstruction using measured test forcing; not a blind forecast",
+    "config": {
+      "n_delays": 32,
+      "delay_interval": 1,
+      "rank": 32,
+      "ridge_alpha": 0.0,
+      "n_forcing": 16,
+      "retained_energy": 0.9999948047061236
+    },
+    "validation_metrics": {
+      "rmse": 0.15310730609233544,
+      "mae": 0.12269223171036174,
+      "nrmse_std": 0.18543239983170867,
+      "correlation": 0.9871713237511474,
+      "r2": 0.9656148250926533
+    },
+    "test_metrics": {
+      "rmse": 0.13745698525849145,
+      "mae": 0.10964166355780187,
+      "nrmse_std": 0.15795088471265184,
+      "correlation": 0.9927131243693603,
+      "r2": 0.9750515180184905,
+      "spectral_rmse_db": 2.6090476419917135,
+      "rmse_pcm_counts": 4.92911170237478,
+      "mae_pcm_counts": 3.931673649718824
+    },
+    "spectral_radius_before_stabilization": 0.9995533328147215,
+    "stability_contraction": 1.0
+  },
+  "autonomous": {
+    "interpretation": "free forecast after the split; no measured test samples used",
+    "config": {
+      "n_delays": 64,
+      "delay_interval": 1,
+      "rank": 12,
+      "ridge_alpha": 0.0,
+      "n_forcing": 0,
+      "retained_energy": 0.9536075424182751
+    },
+    "validation_metrics": {
+      "rmse": 0.3949056802424778,
+      "mae": 0.31046710182509324,
+      "nrmse_std": 0.47828095120668995,
+      "correlation": 0.8819264963639469,
+      "r2": 0.7712473317128239
+    },
+    "free_forecast_test_metrics": {
+      "rmse": 0.5268026098363922,
+      "mae": 0.4292699459739966,
+      "nrmse_std": 0.6053452877357633,
+      "correlation": 0.825487976439828,
+      "r2": 0.6335570826161059,
+      "spectral_rmse_db": 63.38281712170283,
+      "rmse_pcm_counts": 18.89077447830703,
+      "mae_pcm_counts": 15.393321119324524
+    },
+    "spectral_radius_before_stabilization": 0.9999481284720841,
+    "stability_contraction": 1.0
+  },
+  "debug_one_step": {
+    "interpretation": "next-sample prediction using measured samples only through the previous instant",
+    "config": {
+      "n_delays": 32,
+      "delay_interval": 1,
+      "rank": 32,
+      "ridge_alpha": 0.01,
+      "n_forcing": 0,
+      "retained_energy": 0.9999948047061236
+    },
+    "validation_metrics": {
+      "rmse": 0.15902516599770858,
+      "mae": 0.12550375877332756,
+      "nrmse_std": 0.19259968003621697,
+      "correlation": 0.9812989925921979,
+      "r2": 0.9629053632499468
+    },
+    "test_metrics": {
+      "rmse": 0.17635478666104062,
+      "mae": 0.13953749175720084,
+      "nrmse_std": 0.20264808313698676,
+      "correlation": 0.9792757256407071,
+      "r2": 0.9589337544009049,
+      "spectral_rmse_db": 8.474880236213489,
+      "rmse_pcm_counts": 6.3239597541445685,
+      "mae_pcm_counts": 5.0037172155858425
+    },
+    "spectral_radius_before_stabilization": 0.9894808516771574
+  },
+  "outputs": {
+    "figure": "havok_audio_Taguan_004_2_improved.png",
+    "metrics": "havok_audio_Taguan_004_2_metrics.json"
+  }
+}
